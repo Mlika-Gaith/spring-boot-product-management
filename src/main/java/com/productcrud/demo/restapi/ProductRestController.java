@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,8 @@ import com.productcrud.demo.services.IServiceProduct;
 
 import lombok.AllArgsConstructor;
 
+// allow everyone to consume api
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/productApi")
 @AllArgsConstructor
