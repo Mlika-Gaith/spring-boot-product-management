@@ -44,6 +44,11 @@ public class ProductRestController {
         return serviceProduct.getImage(id);
     }
 
+    @GetMapping(path = "/allproducts/{id}")
+    public Product getProduct(@PathVariable("id") int id) throws IOException {
+        return serviceProduct.getProduct(id);
+    }
+
     @PostMapping("/addProduct")
     public void addProduct(@RequestParam("product") String product,
             @RequestParam(value = "file", required = false) MultipartFile multiFile)
